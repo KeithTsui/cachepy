@@ -73,7 +73,7 @@ def set( key, value, expiry = DEFAULT_CACHING_TIME ):
     global CACHE, STATS_KEYS_COUNT
     if key not in CACHE:
         STATS_KEYS_COUNT += 1
-    if expiry != None:
+    if expiry is not None:
         expiry = time.time() + int( expiry )
     
     try:
